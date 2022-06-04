@@ -1,0 +1,28 @@
+==================Reverse Integer==================
+
+class Solution {
+
+	public int reverse(int x)
+	{
+            // Variable Declaration
+		int temp;
+		int rem;
+		int newres;
+		int res = 0;
+		temp=x;
+
+		while (temp != 0)
+		{
+			rem = temp % 10;
+			newres = res * 10 + rem;
+			if ((newres - rem) / 10 != res)
+			{ 
+				return 0; 
+			}
+			res = newres;
+			temp = temp / 10;
+		}
+
+		return res;
+	}
+}
