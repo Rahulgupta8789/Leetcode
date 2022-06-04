@@ -1,0 +1,26 @@
+ =====================Palindrome======================
+
+class Solution {
+	public boolean isPalindrome(int x) {
+        
+          // Variable Declaration
+		int temp;
+		int rem;
+		int res=0;
+		if(x<0)
+			return false;
+		temp=x;
+		while(temp!=0){
+			rem = temp%10;
+			res = (res*10)+rem;
+			temp = temp/10;
+
+		}
+
+		if(res==x)
+
+			return true;
+		else
+			return false;
+	}
+}
